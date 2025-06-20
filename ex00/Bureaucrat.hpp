@@ -1,37 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucreat.hpp                                    :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:44 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/19 21:34:53 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/20 07:24:46 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCREAT_HPP
-#define BUREAUCREAT_HPP
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
+
+#define GRY "\033[38;5;67m"
+#define SGG "\033[38;2;157;193;131m" // sage green
+#define MVP "\033[38;2;224;176;255m"
+#define ABG "\033[38;2;169;92;104m"
+#define PBL "\033[38;2;125;127;255m"
+#define ORG "\033[38;2;255;140;0m"
 
 #define	HIGHEST_GR 1
 #define LOWEST_GR 150
 
 #include <string>
 
-class Bureaucreat
+class Bureaucrat
 {
 	private:
 		const std::string	_name;
 		unsigned int	_grade;
 
 	public:
-		Bureaucreat (std::string name, unsigned int grade);
-		Bureaucreat (Bureaucreat &other);
-		Bureaucreat&	operator=(Bureaucreat &other);
-		~Bureaucreat(void);
+		Bureaucrat (void);
+		Bureaucrat (std::string name, unsigned int grade);
+		Bureaucrat (const Bureaucrat &other);
+		Bureaucrat&	operator=(const Bureaucrat &other);
+		~Bureaucrat(void);
 
-		const std::string	getName(void);
-		unsigned int	getGrade(void);
+		const std::string	getName(void) const;
+		unsigned int	getGrade(void) const;
 
 		void	incrementGrade(void);
 		void	decrementGrade(void);
@@ -49,6 +57,6 @@ class Bureaucreat
 		};
 };
 
-std::ostream	operator<<(std::ostream &out, Bureaucreat const &other);
+std::ostream	&operator<<(std::ostream &out, Bureaucrat const &other);
 
 #endif
