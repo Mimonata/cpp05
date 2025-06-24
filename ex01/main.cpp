@@ -6,11 +6,12 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:35 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/21 14:56:17 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/24 08:26:27 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 #include <iostream>
 
@@ -18,9 +19,9 @@ int	main(void)
 {
 	try
 	{
-		Bureaucrat	a("Ret", 160);
+		Form	a("ZN25", 160, 4);
 	}
-	catch(Bureaucrat::GradeTooHighException& e)
+	catch(Form::GradeTooHighException& e)
 	{
 		std::cerr << ABG << e.what() << std::endl;
 	}
