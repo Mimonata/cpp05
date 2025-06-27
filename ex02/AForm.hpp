@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 17:13:11 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/26 18:07:26 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/27 18:12:07 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ class AForm
 		unsigned int	getExecGrade() const;
 
 		void	beSigned(Bureaucrat &b);
+
+		virtual void execute(Bureaucrat const & executor) = 0;
 
 		class GradeTooLowException	: public std::exception
 		{
