@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 17:13:11 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/25 07:30:18 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/26 18:07:26 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 #include <string>
 #include <iostream>
@@ -33,7 +33,7 @@ class AForm
 		
 	public:
 		AForm(std::string formName, unsigned int signGrade, unsigned int execGrade);
-		~AForm();
+		virtual ~AForm();
 		AForm& operator=(const AForm &other);
 		AForm(const AForm &other);
 

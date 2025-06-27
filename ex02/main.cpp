@@ -6,12 +6,12 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:35 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/24 20:38:56 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/25 07:32:59 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 #include <iostream>
 

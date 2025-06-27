@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 17:12:54 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/25 07:30:43 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/25 07:31:59 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
 AForm::AForm(std::string formName, unsigned int signGrade, unsigned int execGrade)
@@ -69,7 +69,7 @@ void	AForm::beSigned(Bureaucrat &b)
 		throw GradeTooLowException();
 }
 
-std::ostream	&operator<<(std::ostream &out, const AForm &form)
+std::ostream	&operator<<(std::ostream &out, AForm &form)
 {
 	out << "Form " << form.getNameForm() << " requires the grades:\n\t" 
 	<< form.getSignGrade() << " for signing\n\t" << form.getExecGrade() << " for execution.";
