@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 17:13:11 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/27 18:12:07 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/29 16:40:58 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,12 @@ class AForm
 		};
 
 		class GradeTooHighException	:public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
+
+		class FormUnsignedException	:public std::exception
 		{
 			public:
 				virtual const char	*what() const throw();

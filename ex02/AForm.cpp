@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 17:12:54 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/25 07:31:59 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/29 16:56:29 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,17 @@ const char	*AForm::GradeTooHighException::what() const throw()
 const char	*AForm::GradeTooLowException::what() const throw()
 {
 	return "Exception: grade too low";
+}
+
+const char	*AForm::FormUnsignedException::what() const throw()
+{
+	return "Exception: form unsigned";
+}
+
+void AForm::execute(Bureaucrat const & executor)
+{
+	if (!_signed)
+		throw FormUnsignedException();
+	if (executor.getGrade() > _execGrade)
+		throw GradeTooLowException();
 }

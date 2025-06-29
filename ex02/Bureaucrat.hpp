@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:44 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/21 14:55:45 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/29 16:37:27 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 #define LOWEST_GR 150
 
 #include <string>
+#include "AForm.hpp"
 
 class Bureaucrat
 {
@@ -44,6 +45,8 @@ class Bureaucrat
 
 		void	incrementGrade(void);
 		void	decrementGrade(void);
+
+		void	executeForm(AForm const & form);
 
 		class	GradeTooHighException	: public std::exception
 		{
