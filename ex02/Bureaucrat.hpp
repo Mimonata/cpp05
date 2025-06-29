@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
+/*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:44 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/29 16:37:27 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/29 20:57:36 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 #define LOWEST_GR 150
 
 #include <string>
-#include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {

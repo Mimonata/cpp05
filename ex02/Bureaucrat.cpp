@@ -6,11 +6,12 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:39:29 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/20 07:25:00 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/29 21:03:27 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 #include <iostream>
 
 Bureaucrat::Bureaucrat(void)	: _name("default"), _grade(LOWEST_GR)
@@ -81,4 +82,21 @@ std::ostream	&operator<<(std::ostream &out, Bureaucrat const &other)
 {
 	out << other.getName() << ", bureaucrat grade: " << other.getGrade() << std::endl;
 	return out;
+}
+
+void	Bureaucrat::executeForm(AForm const & form)
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch(AForm::GradeTooLowException& e)
+	{
+		std::cout << _name << " couldn't execute " << form.getNameForm() <<
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 }
