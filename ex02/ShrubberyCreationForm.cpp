@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
+/*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 18:14:27 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/29 17:38:50 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/30 07:35:33 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=(ShrubberyCreationForm &o
 	return *this;
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const & executor)
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	AForm::execute(executor);
 	std::string	outName = _target + "_shrubbery";
@@ -60,7 +60,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor)
 	outfile.close();
 }
 
-void	ShrubberyCreationForm::drawShrub(std::ofstream &outfile)
+void	ShrubberyCreationForm::drawShrub(std::ofstream &outfile) const
 {
 	outfile << "               .     .  .      +     .      .          ." << std::endl;
     outfile << "         .       .      .     #       .           ." << std::endl;

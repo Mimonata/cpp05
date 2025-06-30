@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 16:26:48 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/29 20:35:02 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/30 07:32:34 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class RobotomyRequestForm	: public AForm
 			RobotomyRequestForm(RobotomyRequestForm &other);
 			RobotomyRequestForm&	operator=(RobotomyRequestForm &other);
 
-			void execute(Bureaucrat const & executor);
+			void execute(Bureaucrat const & executor) const;
 };
 
 #endif

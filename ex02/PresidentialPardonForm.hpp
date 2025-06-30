@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 16:29:33 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/29 20:45:17 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/30 07:32:16 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class PresidentialPardonForm	: public AForm
 			PresidentialPardonForm(PresidentialPardonForm &other);
 			PresidentialPardonForm&	operator=(PresidentialPardonForm &other);
 
-			void execute(Bureaucrat const & executor);
+			void execute(Bureaucrat const & executor) const;
 };
 
 #endif

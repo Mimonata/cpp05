@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 16:28:23 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/29 20:42:42 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/30 07:32:24 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ RobotomyRequestForm&	RobotomyRequestForm::operator=(RobotomyRequestForm &other)
 Makes some drilling noises, then informs that <target> has been robotomized
 successfully 50% of the time. Otherwise, it informs that the robotomy failed.*/
 
-void RobotomyRequestForm::execute(Bureaucrat const & executor)
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
 	AForm::execute(executor);
 	if (_lastExec)

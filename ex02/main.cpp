@@ -6,20 +6,24 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:35 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/25 07:32:59 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/30 07:37:26 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 #include <iostream>
 
 int	main(void)
 {
+	AForm	*a = new ShrubberyCreationForm("garden");
+	
 	try
 	{
-		AForm	a("ZN25", 160, 4);
+		
 	}
 	catch(AForm::GradeTooHighException& e)
 	{
@@ -68,6 +72,6 @@ int	main(void)
 	{
 		std::cerr << ABG << e.what() << std::endl;
 	}
-	
+	delete a;
 	return 0;
 }

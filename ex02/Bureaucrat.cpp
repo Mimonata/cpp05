@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:39:29 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/29 21:03:27 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/30 07:27:10 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,13 +90,18 @@ void	Bureaucrat::executeForm(AForm const & form)
 	{
 		form.execute(*this);
 	}
-	catch(AForm::GradeTooLowException& e)
+	catch(AForm::GradeTooLowException &e)
 	{
-		std::cout << _name << " couldn't execute " << form.getNameForm() <<
+		std::cout << *this << "\n: grade does not authorize them to execute " << form.getNameForm() 
+		<< "." << e.what() << std::endl;
+	}
+	catch(AForm::FormUnsignedException &e)
+	{
+		std::cout << form.getNameForm() << "is unsigned. Execution not possible without signiture:" 
+		<< e.what() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
 }

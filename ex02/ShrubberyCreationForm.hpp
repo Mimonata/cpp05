@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
+/*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 07:42:02 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/29 17:37:55 by spitul           ###   ########.fr       */
+/*   Updated: 2025/06/30 07:35:43 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class ShrubberyCreationForm	: public AForm
 			ShrubberyCreationForm(ShrubberyCreationForm &other);
 			ShrubberyCreationForm&	operator=(ShrubberyCreationForm &other);
 
-			void execute(Bureaucrat const & executor);
+			void execute(Bureaucrat const & executor) const;
 
-			void	drawShrub(std::ofstream &outfile);
+			void	drawShrub(std::ofstream &outfile) const;
 };
 
 
