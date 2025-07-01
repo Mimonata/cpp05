@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/13 17:47:50 by spitul            #+#    #+#              #
-#    Updated: 2025/06/30 23:43:40 by spitul           ###   ########.fr        #
+#    Updated: 2025/06/30 23:45:00 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp \
 	ShrubberyCreationForm.hpp
 
-NAME = shrub
+NAME = intern
 
 all: $(NAME)
 
