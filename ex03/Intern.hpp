@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 23:46:22 by spitul            #+#    #+#             */
-/*   Updated: 2025/06/30 23:52:32 by spitul           ###   ########.fr       */
+/*   Updated: 2025/07/02 20:23:46 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <string>
 
-#include "AForm.hpp"
+class AForm;
 
 class Intern
 {
