@@ -6,17 +6,17 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/13 17:47:50 by spitul            #+#    #+#              #
-#    Updated: 2025/06/30 23:45:00 by spitul           ###   ########.fr        #
+#    Updated: 2025/07/02 21:22:39 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = Bureaucrat.cpp main.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp \
-	ShrubberyCreationForm.cpp
+	ShrubberyCreationForm.cpp Intern.cpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp \
-	ShrubberyCreationForm.hpp
+	ShrubberyCreationForm.hpp Intern.hpp
 
 NAME = intern
 

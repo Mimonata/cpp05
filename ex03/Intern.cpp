@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 23:48:17 by spitul            #+#    #+#             */
-/*   Updated: 2025/07/02 21:18:29 by spitul           ###   ########.fr       */
+/*   Updated: 2025/07/02 21:24:15 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Intern::~Intern()
 Intern&	Intern::operator=(const Intern &other)
 {
 	(void)other;
+	return *this;
 }
 
 Intern::Intern(const Intern &other)
@@ -48,6 +49,7 @@ AForm*	Intern::makeForm(std::string formName, std::string target)
 	{
 		if (formName.compare(formType[j]) == 0)
 			break;
+		j ++;
 	}
 	
 	switch (j)
