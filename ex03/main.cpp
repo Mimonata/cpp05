@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:35 by spitul            #+#    #+#             */
-/*   Updated: 2025/07/03 06:51:05 by spitul           ###   ########.fr       */
+/*   Updated: 2025/07/03 18:39:06 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,16 @@ int	main(void)
 	r = Maria.makeForm("shrubbery creation", "garden");
 	if (r != NULL)
 	{
-		//r->execute(b);
+		try
+		{
+			r->execute(b);
+		}
+		catch(const AForm::FormUnsignedException& e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+		
+		
 		r->beSigned(b);
 		r->execute(b);
 		delete (r);
