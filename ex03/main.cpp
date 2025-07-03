@@ -6,17 +6,39 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:35:35 by spitul            #+#    #+#             */
-/*   Updated: 2025/07/02 21:21:44 by spitul           ###   ########.fr       */
+/*   Updated: 2025/07/03 06:51:05 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
+#include "Bureaucrat.hpp"
+#include "AForm.hpp"
 #include <iostream>
 
 int	main(void)
 {
 	Intern Maria;
-
-	Maria.makeForm("shrubbery creation", "garden");
+	AForm	*r;
+	Bureaucrat	b("Olle", 1);
+	
+	r = Maria.makeForm("shrubbery creation", "garden");
+	if (r != NULL)
+	{
+		//r->execute(b);
+		r->beSigned(b);
+		r->execute(b);
+		delete (r);
+	}
+	r = Maria.makeForm("robotomy request", "Harzer str");
+	if (r != NULL)
+	{
+		//r->execute(b);
+		r->beSigned(b);
+		r->execute(b);
+		delete (r);
+	}
+	r = Maria.makeForm("test", "mars");
+	if (r == NULL)
+		std::cout << "Form NULL" << std::endl;
 	return 0;
 }
