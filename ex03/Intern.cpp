@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: spitul <spitul@student.42berlin.de >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 23:48:17 by spitul            #+#    #+#             */
-/*   Updated: 2025/07/03 06:52:50 by spitul           ###   ########.fr       */
+/*   Updated: 2025/07/05 14:32:56 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ AForm*	Intern::makeForm(std::string formName, std::string target)
 	int	j = 0;
 		
 	for (size_t i = 0; i < formName.length(); i ++)
-		std::tolower(formName[i]);
+		formName[i] = std::tolower(formName[i]);
 		
 	while(j < 3)
 	{
